@@ -1,0 +1,131 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Be My Valentine ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            height: 100vh;
+            background-color: #ffb6c1;
+            overflow: hidden;
+        }
+
+        /* Heart background */
+        body::before {
+            content: "❤️ 💕 ❤️ 💖 💗 ❤️ 💕 💖 💗 ❤️ 💕 ❤️ 💖 💗 ❤️ 💕";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            font-size: 40px;
+            opacity: 0.2;
+            animation: floatHearts 20s linear infinite;
+        }
+
+        @keyframes floatHearts {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        .card {
+            position: relative;
+            background: #fff0f5;
+            width: 70%;
+            max-width: 600px;
+            margin: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #ff1744;
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #e91e63;
+            font-size: 30px;
+        }
+
+        p {
+            color: #c2185b;
+            font-size: 20px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: #ff4081;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 20px;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #f50057;
+            transform: scale(1.1);
+        }
+
+        #noBtn {
+            position: absolute;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #ad1457;
+        }
+    </style>
+
+    <script>
+        function sayYes() {
+            alert("YAY!!! 💖💖💖\nYou just made my Valentine's Day perfect, Oratile 😍");
+        }
+
+        function moveButton() {
+            let x = Math.random() * 300;
+            let y = Math.random() * 200;
+            document.getElementById("noBtn").style.transform =
+                "translate(" + x + "px, " + y + "px)";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>❤️ Oratile ❤️</h1>
+        <h2>Will You Be My Valentine?</h2>
+
+        <p>
+            From the moment you smile, my heart forgets how to behave 💕<br>
+            This is me, asking in the cutest way I know 😌
+        </p>
+
+        <div class="buttons">
+            <button onclick="sayYes()">YES 💖</button>
+            <button id="noBtn" onmouseover="moveButton()">NO 💔</button>
+        </div>
+
+        <div class="footer">
+            Made with love & courage 💌
+        </div>
+    </div>
+
+</body>
+</html>
